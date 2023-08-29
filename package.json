@@ -4,10 +4,12 @@
   "description": "github pages site",
   "main": "index.html",
   "scripts": {
-    "watchcss": "tailwindcss -i ./src/main.css -o ./dist/output.css --watch",
-    "buildcss": "tailwindcss -i ./src/main.css -o ./dist/output.css",
+    "watchcss": "tailwindcss -i ./src/main.css -o ./dist/main.css --watch",
+    "buildcss": "tailwindcss -i ./src/main.css -o ./dist/main.css",
     "build": "npm run buildcss",
-    "watch": "npm run watchcss"
+    "watch": "npm run watchcss",
+    "serve": "http-server",
+    "dev": "run-s build serve"
   },
   "repository": {
     "type": "git",
@@ -24,7 +26,10 @@
   },
   "homepage": "https://github.com/dlknowles/dlknowles.github.io#readme",
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
     "autoprefixer": "^10.4.15",
+    "http-server": "^14.1.1",
+    "npm-run-all": "^4.1.5",
     "postcss": "^8.4.28",
     "tailwindcss": "^3.3.3"
   }
