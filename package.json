@@ -4,7 +4,10 @@
   "description": "github pages site",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watchcss": "tailwindcss -i ./src/main.css -o ./dist/output.css --watch",
+    "buildcss": "tailwindcss -i ./src/main.css -o ./dist/output.css",
+    "build": "npm run buildcss",
+    "watch": "npm run watchcss"
   },
   "repository": {
     "type": "git",
@@ -21,7 +24,8 @@
   },
   "homepage": "https://github.com/dlknowles/dlknowles.github.io#readme",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-watch": "^4.3.11"
+    "autoprefixer": "^10.4.15",
+    "postcss": "^8.4.28",
+    "tailwindcss": "^3.3.3"
   }
 }
