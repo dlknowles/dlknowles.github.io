@@ -46,5 +46,7 @@ jobs:
         with:
           node-version: 16.13.x
           cache: npm
+      - name: Npm install
+        run: npm install
       - name: Run npm build
         run: npm run build
