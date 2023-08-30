@@ -47,5 +47,3 @@ jspm_packages
 .yarn-integrity
 
 # build directories
-dist/**/*.css
-dist/**/*.js
