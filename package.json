@@ -6,10 +6,12 @@
   "scripts": {
     "watchcss": "tailwindcss -i ./src/main.css -o ./dist/main.css --watch",
     "buildcss": "tailwindcss -i ./src/main.css -o ./dist/main.css",
-    "build": "npm run buildcss",
-    "watch": "npm run watchcss",
+    "watchjs": "webpack --watch",
+    "buildjs": "webpack",
+    "build": "run-p buildcss buildjs",
+    "watch": "run-p watchcss watchjs",
     "serve": "http-server",
-    "dev": "run-s build serve"
+    "dev": "run-p watch serve"
   },
   "repository": {
     "type": "git",
@@ -31,6 +33,8 @@
     "http-server": "^14.1.1",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.28",
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
   }
 }
